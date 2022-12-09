@@ -1,168 +1,58 @@
 <html>
-
   <head>
-
-    <title> DEMO IPTV EAM </title>
-
+    <title> JLL</title>
     <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
-
     <meta name = "description" content = "Las aventuras de mi gato favorito Lucky, con historias, fotos y películas">
-
     <meta name = "keywords" content = "cat, Lucky, pet, animal">
-
-    <link rel = "stylesheet" type = "text / css" href = "style.css">
-
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel = "icono de acceso directo" href = "/ favicon.ico">
-	<STYLE TYPE="text/css">
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		.chanel{
-		
-			color:red;
-			border-width:thin;
-			border-color:red;
-			border-style: solid;
-			width:25%;height:25%;text-align:center;
-		}
-		.chanel a{
-			text-decoration:none;
-			
-		}
-		
-		.imagen{
-			width: 100%;
-			border-width:thin;
-			border-color:black;
-			border-style: solid;
-		}
-.imagen img{
-    width: 100%;
-}
-.galeria{
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-}
-	</STYLE>
-
   </head>
+
+<script>
+	
+	
+	traerDatos();
+	
+	function traerDatos(){
+		
+		const xhttp= new XMLHttpRequest();
+		xhttp.open("GET", "channel.json", true);
+		xhttp.send();
+		xhttp.onreadystatechange= function(){
+			if(this.readyState==4 && this.status==200){
+				const datos=JSON.parse(this.responseText);
+				//console.log(datos);
+				var url="https://tallerbicicletabeja.guru/r.html?id=";
+				var text="";
+				for(var item of datos){
+					//console.log(item.nombre);
+					text += "<div class='imagen'><a href='"+url;
+					var id=item.id;
+					var nombre=item.nombre;
+					var logo=item.logo;
+					text+=id+"'><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
+					
+				}
+				document.getElementById("galeria").innerHTML = text;
+			}
+		}
+	}
+
+</script>
 
   <body>
 
     <h1> CANALES </h1>
 	
 	<div class="wrap">
-        <div class="galeria">
-		
-            <div class="imagen elemento1">
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1148">
-					<img src="LOGOS_TV/history.png" alt="HISTORY">
-				</a>
-		
-			</div>
-			
-          
-
-            <div class="imagen elemento12"><img src="/img/12.jpg" alt=""></div>
-			
-			<div class="imagen elemento1">
-				<a href="https://casasolabeja.christmas/drtv2.html">DSPORT2 EXTERNO </a>
-			</div>
-
-		 	
-			<div class="imagen elemento1">
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1147"><img src="LOGOS_TV/H2.png" alt="HISTORY 2"></a>
-			</div>
-			
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1061">DSPORT 1 </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1062">DSPORT 2 </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1190"><img src="LOGOS_TV/sony.png" alt="SONY"> </a></div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1243"><img src="LOGOS_TV/Universal Channel.png" alt="UNIVERSAL"> </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1196">STAR CHANEL </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://www.audiostreamvolt.com/tvcliente/canal8catacaos.html">CANAL 8-CAT </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1169">NAT GEO </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1249">WILLAX </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1227">TNT </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1040">TCY SPORT </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1017">ATV + </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1027">CARTON NEW </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1211">SYFY </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1236">ATV HD </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1053">PARAMOUNT+ </a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1087">DISNEY JR</a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1084">DISNEY</a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1175">NICKELODEON</a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1012">ANIMAL PLANET</a>
-			</div>
-			<div class="imagen elemento1">  
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1248">WARNER B</a>
-			</div>
-			
-			
+        <div class="galeria" id="galeria">
+		      		
         </div>
     </div>
 
-
-    <div id = "mainContent">
-		
-		
-	
-		
-	
-     
-      
-
-     
-
-    </div>
-
     <div id = "barra lateral">
-
-      <h2> ¡Compra nuestros productos! </h2>
-
-      <div class="imagen elemento1"> Algunos de nuestros productos incluyen <span class = "product"> SuperWidgets </span>, <span class = "product"> MegaWidgets </span> y <span class = "product"> WonderWidgets </span> . </div>
-
+    <h2> ¡Compra nuestros productos! </h2>
+    <div class="imagen elemento1"> Algunos de nuestros productos incluyen <span class = "product"> SuperWidgets </span>, <span class = "product"> MegaWidgets </span> y <span class = "product"> WonderWidgets </span> . </div>
     </div>
 
   </body>

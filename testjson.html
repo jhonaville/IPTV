@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title> DEMO IPTV EAM </title>
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta name = "description" content = "Las aventuras de mi gato favorito Lucky, con historias, fotos y películas">
+    <meta name = "keywords" content = "cat, Lucky, pet, animal">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel = "icono de acceso directo" href = "/ favicon.ico">
+  </head>
+
+<script>
+	var url="https://tallerbicicletabeja.guru/r.html?id=";
+	
+	traerDatos();
+	
+	function traerDatos(){
+		const xhttp= new XMLHttpRequest();
+		xhttp.open("GET", "channel.json", true);
+		xhttp.send();
+		xhttp.onreadystatechange= function(){
+			if(this.readyState==4 && this.status==200){
+				let datos=JSON.parse(this.responseText);
+				console.log(datos);
+			}
+		}
+	}
+	
+
+	console.log("holiii");
+</script>
+
+  <body>
+
+    <h1> CANALES </h1>
+	
+	<div class="wrap">
+        <div class="galeria">
+		
+            <div class="imagen">
+				<a href="https://tallerbicicletabeja.guru/r.html?id=1148">
+					<img src="LOGOS_TV/history.png" alt="HISTORY">
+				</a>
+			</div>			
+         		
+        </div>
+    </div>
+
+    <div id = "barra lateral">
+    <h2> ¡Compra nuestros productos! </h2>
+    <div class="imagen elemento1"> Algunos de nuestros productos incluyen <span class = "product"> SuperWidgets </span>, <span class = "product"> MegaWidgets </span> y <span class = "product"> WonderWidgets </span> . </div>
+    </div>
+
+  </body>
+
+</html>

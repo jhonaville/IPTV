@@ -25,21 +25,18 @@
 				var text="";
 				for(var item of datos){
 					url="https://tallerbicicletabeja.guru/r.html?id=";
-					if(item.id="0008"){
-						url="https://www.audiostreamvolt.com/tvcliente/canal8catacaos.html";
-						text += "<div class='imagen'><a href='"+url;
-						var id=item.id;
-						var nombre=item.nombre;
-						var logo=item.logo;
-						text+="'><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
-						break;
-					}
-					//console.log(item.nombre);
-					text += "<div class='imagen'><a href='"+url;
 					var id=item.id;
 					var nombre=item.nombre;
 					var logo=item.logo;
-					text+=id+"'><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
+					if(item.id="0008"){
+						url="https://www.audiostreamvolt.com/tvcliente/canal8catacaos.html";
+						var id="";				
+					}				
+						//console.log(item.nombre);
+						text += "<div class='imagen'><a href='"+url;			
+						text+=id+"'><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
+					}
+					
 					
 				}
 				document.getElementById("galeria").innerHTML = text;

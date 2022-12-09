@@ -2,7 +2,7 @@
 {
 	"id":0008,
 	"nombre":"Canal 8 Catacaos",
-	"logo":,
+	"logo":"",
 	"keyid":"",
 	"key":"",
 	"uri":""	
@@ -10,7 +10,7 @@
 {
 	"id":1061,
 	"nombre":"DSPORT",
-	"logo":,
+	"logo":"",
 	"keyid":"7119069b99015b4eb9ee4300577399e2",
 	"key":"b89827cc970cd78da882ffca3504c774",
 	"uri":""	
@@ -18,7 +18,7 @@
 {
 	"id":1069,
 	"nombre":"DIRECTV",
-	"logo":,
+	"logo":"",
 	"keyid":"a8cf52be0eb358c9a8bfcd1fc94d7cb5",
 	"key":"834c7082d28d85f5da38dde949b66c9a",
 	"uri":""	
@@ -26,7 +26,7 @@
 {
 	"id":1109,
 	"nombre":"ESPN",
-	"logo":,
+	"logo":"",
 	"keyid":"70ce8ec0bda25664b32550e1d377a480",
 	"key":"2b91247bd45364eb6ab5d4c2c71caeb0",
 	"uri":""	
@@ -34,7 +34,7 @@
 {
 	"id":1233,
 	"nombre":"TNT SPORT",
-	"logo":,
+	"logo":"",
 	"keyid":"c4697bf458da52f8b96b36cce761d571",
 	"key":"a4dee77615279c858b19e5bb69ab6755",
 	"uri":""	
@@ -42,7 +42,7 @@
 {
 	"id":1105,
 	"nombre":"ESPN 2",
-	"logo":,
+	"logo":"",
 	"keyid":"e97438334f9259b5879ffff21631f2c4",
 	"key":"20a2c7f102fd3e96bacda90c24df3e95",
 	"uri":""	
@@ -50,7 +50,7 @@
 {
 	"id":1071,
 	"nombre":"DSPORT +",
-	"logo":,
+	"logo":"",
 	"keyid":"f19c3a8c638d52c2ab77b9566bcb2996",
 	"key":"e4fabf39d23cd6557fa71b6e754ef1e7",
 	"uri":""	
@@ -58,7 +58,7 @@
 {
 	"id":1251,
 	"nombre":"WIN SPORT+",
-	"logo":,
+	"logo":"",
 	"keyid":"34d62b22efc63f659eac5ba82289882d",
 	"key":"696de7a82257ddb51ed3fdec04b6ec8b",
 	"uri":""	
@@ -66,7 +66,7 @@
 {
 	"id":1106,
 	"nombre":"ESPN 3",
-	"logo":,
+	"logo":"",
 	"keyid":"2444f7f19b29352eb6d1c7f9d8f71d59",
 	"key":"027fc4f3b6275111c0c8b5ae84933ea8",
 	"uri":""	
@@ -74,7 +74,7 @@
 {
 	"id":1117,
 	"nombre":"Fox Sport 1",
-	"logo":,
+	"logo":"",
 	"keyid":"5804b7a24ca1303d8511b6d49278610c",
 	"key":"fc0a63fd4fb80fd67ad25646857082f5",
 	"uri":""	
@@ -82,7 +82,7 @@
 {
 	"id":1125,
 	"nombre":"ESPN Premium",
-	"logo":,
+	"logo":"",
 	"keyid":"4cb49df341423cb597bf3e79b78f2a52",
 	"key":"11ad69d2c84f41dbb520abfe38b19fe7",
 	"uri":""	
@@ -90,7 +90,7 @@
 {
 	"id":1118,
 	"nombre":"Fox SPorts",
-	"logo":,
+	"logo":"",
 	"keyid":"76be81041e7133a38457f097d2b0041c",
 	"key":"8ced846c9effd56d7e2a9276224bb3c5",
 	"uri":""	
@@ -98,7 +98,7 @@
 {
 	"id":1123,
 	"nombre":"Fox SPorts 3",
-	"logo":,
+	"logo":"",
 	"keyid":"2901c41dbfc85aa6a26db29cc56bc2c6",
 	"key":"9e1d0809b5e966987deaed55fd2631ad",
 	"uri":""	
@@ -106,7 +106,7 @@
 {
 	"id":1232,
 	"nombre":"TNT Sport HD",
-	"logo":,
+	"logo":"",
 	"keyid":"1b9984dc66b259fe8ae597cb4fc1f4c3",
 	"key":"fdbbf5a39109349d7b6a997e83fb9e4b",
 	"uri":""	
@@ -114,7 +114,7 @@
 {
 	"id":1157,
 	"nombre":"Latina PE",
-	"logo":,
+	"logo":"",
 	"keyid":"174f5f2ee8193624bec9dd8e5d507a64",
 	"key":"8ea131613f968b9c2b07d2d08ce5ef44",
 	"uri":""	
@@ -122,7 +122,7 @@
 {
 	"id":1099,
 	"nombre":"ESPN 2",
-	"logo":,
+	"logo":"",
 	"keyid":"933de8e915535ae18c2558a5a76318c9",
 	"key":"e1fc1eed4eae83e0dc1b3705cb62ca64",
 	"uri":""	
@@ -130,7 +130,7 @@
 {
 	"id":1103,
 	"nombre":"ESPN 3",
-	"logo":,
+	"logo":"",
 	"keyid":"f91c485f605b337cab75d446604d5dfc",
 	"key":"933c006497039ce8b345d53a1131d8c4",
 	"uri":""	
@@ -138,7 +138,7 @@
 {
 	"id":1056,
 	"nombre":"DeportTV Mundial",
-	"logo":,
+	"logo":"",
 	"keyid":"00a775d1b96b5951b3c3ab5799f9868e",
 	"key":"3a56df0047dd709388c606f9ff2fbadd",
 	"uri":""	
@@ -146,7 +146,7 @@
 {
 	"id":1217,
 	"nombre":"TELEMUNDO",
-	"logo":,
+	"logo":"",
 	"keyid":"576b5361b6273d2fbb14aae6e8eb646a",
 	"key":"1e0c5591f570116dbf9f22da26d17226",
 	"uri":""	
@@ -154,7 +154,7 @@
 {
 	"id":1017,
 	"nombre":"ATV+ PE",
-	"logo":,
+	"logo":"",
 	"keyid":"a85710136cd7392dabdaf4e2d7169b5f",
 	"key":"dae80dc1e63aff5975cce0f302870b79",
 	"uri":""	
@@ -162,7 +162,7 @@
 {
 	"id":1027,
 	"nombre":"CARTOONITO",
-	"logo":,
+	"logo":"",
 	"keyid":"6d842222f1715a59ad24623c21745344",
 	"key":"87061469dad96757078704a03ee3c67f",
 	"uri":""	
@@ -170,7 +170,7 @@
 {
 	"id":1211,
 	"nombre":"SYFY",
-	"logo":,
+	"logo":"",
 	"keyid":"3f90aafd0ab85c6d92e93114e278917b",
 	"key":"9b1e41e8a55a182f69000bdc9304e3cc",
 	"uri":""	
@@ -178,7 +178,7 @@
 {
 	"id":1079,
 	"nombre":"Discovery kids",
-	"logo":,
+	"logo":"",
 	"keyid":"a3b91f95dc9152ce8fa34a7fed103b70",
 	"key":"694eb12c6ca401b454bd742c374a50c0",
 	"uri":""	
@@ -186,7 +186,7 @@
 {
 	"id":1053,
 	"nombre":"Comedy Central",
-	"logo":,
+	"logo":"",
 	"keyid":"cef48e7cfdbd570187a39bff3e433f05",
 	"key":"83fbc8198927fdc469e7968d7503c4f6",
 	"uri":""	
@@ -194,7 +194,7 @@
 {
 	"id":1223,
 	"nombre":"TLC",
-	"logo":,
+	"logo":"",
 	"keyid":"636d0261f1e750868791e4262c83f448",
 	"key":"2158dcf8bee037a4be7bebd5be2f3e9a",
 	"uri":""	
@@ -202,7 +202,7 @@
 {
 	"id":1144,
 	"nombre":"HGTV",
-	"logo":,
+	"logo":"",
 	"keyid":"bdfac486d5255d2396945102d1d3884f",
 	"key":"8c46e4e0890780d7816e3888b7c738c7",
 	"uri":""	
@@ -210,7 +210,7 @@
 {
 	"id":1190,
 	"nombre":"Sony",
-	"logo":,
+	"logo":"",
 	"keyid":"1010b99fb124540aaa475a41259751eb",
 	"key":"1975c6bcc9566a6e94ab263dc8f04b57",
 	"uri":""	
@@ -218,7 +218,7 @@
 {
 	"id":1087,
 	"nombre":"Disney Jr",
-	"logo":,
+	"logo":"",
 	"keyid":"a07d8bfe2f9956f28ca11466b4f520d5",
 	"key":"11fdd8900d1eba9a6c95551f418dbf07",
 	"uri":""	
@@ -226,7 +226,7 @@
 {
 	"id":1084,
 	"nombre":"Disney",
-	"logo":,
+	"logo":"",
 	"keyid":"7d0c49778bc451d2b5ea44346e72a85d",
 	"key":"d5d5ed40788e07eaf3b0616b6abc9e1e",
 	"uri":""	
@@ -234,7 +234,7 @@
 {
 	"id":1081,
 	"nombre":"Turbo Discovery",
-	"logo":,
+	"logo":"",
 	"keyid":"d32d815d1f7f5325ba73562534662c92",
 	"key":"75e66a4ed7880c71655d24e52cad3bd3",
 	"uri":""	
@@ -242,7 +242,7 @@
 {
 	"id":1175,
 	"nombre":"Nickelodeon",
-	"logo":,
+	"logo":"",
 	"keyid":"cfcaedf675745b9c81e5a55bde8f530b",
 	"key":"240ec219dd71670750f37afe83fead16",
 	"uri":""	
@@ -250,7 +250,7 @@
 {
 	"id":1243,
 	"nombre":"Universal",
-	"logo":,
+	"logo":"",
 	"keyid":"3a2cfe6f84f5573c82277af6ceb23c51",
 	"key":"6f72430eef6b803f2b266da1f4eadc9a",
 	"uri":""	
@@ -258,7 +258,7 @@
 {
 	"id":1147,
 	"nombre":"History 2",
-	"logo":,
+	"logo":"",
 	"keyid":"98bf1d510cb45145942e5d4c1d5f211d",
 	"key":"d6d518949cf734c3e03328dda5b45966",
 	"uri":""	
@@ -266,7 +266,7 @@
 {
 	"id":1196,
 	"nombre":"Star Channel",
-	"logo":,
+	"logo":"",
 	"keyid":"7c38d9310d3c5b46a37a39bbec6dd68a",
 	"key":"f4333dfb0e708ec9865b9a6ff2a8e068",
 	"uri":""	
@@ -274,7 +274,7 @@
 {
 	"id":1012,
 	"nombre":"Animal Planet",
-	"logo":,
+	"logo":"",
 	"keyid":"149c371df27a56a18805272041381592",
 	"key":"618b752d33c3e44420219b5c18b0f748",
 	"uri":""	
@@ -282,7 +282,7 @@
 {
 	"id":1181,
 	"nombre":"Paramount",
-	"logo":,
+	"logo":"",
 	"keyid":"68188b3bb79453cab7b26ee929a25ed4",
 	"key":"610c951737cb9e221f07c986b6c66f7d",
 	"uri":""	
@@ -290,7 +290,7 @@
 {
 	"id":1093,
 	"nombre":"Canal Gourmet",
-	"logo":,
+	"logo":"",
 	"keyid":"afb378efc4c937999a9237a734f9a67a",
 	"key":"3b6ca02e5b0589cab0dd32db45308884",
 	"uri":""	
@@ -298,7 +298,7 @@
 {
 	"id":1076,
 	"nombre":"Discovery",
-	"logo":,
+	"logo":"",
 	"keyid":"aab6b4fdb2e15bef8ef07c397b057e60",
 	"key":"e42c375f8304be0563aea9b38eda1f76",
 	"uri":""	
@@ -306,7 +306,7 @@
 {
 	"id":1074,
 	"nombre":"HyH Discovery",
-	"logo":,
+	"logo":"",
 	"keyid":"cba19074379a5b3c875cd1ace01b6cbe",
 	"key":"d9549830c29d5ff0c5c701036eb9cba4",
 	"uri":""	
@@ -314,7 +314,7 @@
 {
 	"id":1148,
 	"nombre":"History",
-	"logo":,
+	"logo":"",
 	"keyid":"0dc64f9b19ab51ae88959afec96e7631",
 	"key":"ef1d0894a936f7393ec7bfa38ff618cb",
 	"uri":""	
@@ -322,7 +322,7 @@
 {
 	"id":1248,
 	"nombre":"Warner Bros",
-	"logo":,
+	"logo":"",
 	"keyid":"56a24732c7c558a0b244dc9d5f910f87",
 	"key":"61dfef81cee11cb419a6120270b9587b",
 	"uri":""	
@@ -330,7 +330,7 @@
 {
 	"id":1249,
 	"nombre":"Willax PE",
-	"logo":,
+	"logo":"",
 	"keyid":"e0140e8c60d2362a9982f97276d0e1a4",
 	"key":"f682dcb20c7068275840411916b79d85",
 	"uri":""	
@@ -338,7 +338,7 @@
 {
 	"id":1045,
 	"nombre":"Cine Latino",
-	"logo":,
+	"logo":"",
 	"keyid":"14c6468aad565259a32023577ac79a39",
 	"key":"f31842f9921a41263e5e66fd4e00cc71",
 	"uri":""	
@@ -346,7 +346,7 @@
 {
 	"id":1134,
 	"nombre":"Gol TV",
-	"logo":,
+	"logo":"",
 	"keyid":"3303b4c6982f381ea9e309009fbb3f27",
 	"key":"a7fd49808f890c2500bf2180aaf42307",
 	"uri":""	
@@ -354,7 +354,7 @@
 {
 	"id":1107,
 	"nombre":"ESPN Extra",
-	"logo":,
+	"logo":"",
 	"keyid":"66da31070eac58fcadb911804917ea28",
 	"key":"886d612fb16aceb172db68fd3016a737",
 	"uri":""	
@@ -362,7 +362,7 @@
 {
 	"id":1227,
 	"nombre":"TNT",
-	"logo":,
+	"logo":"",
 	"keyid":"2bdcf12a2d68305db6c5a1521efd11c7",
 	"key":"ff22ccb2e8b75305f634ec90d18dc01c",
 	"uri":""	
@@ -370,7 +370,7 @@
 {
 	"id":1115,
 	"nombre":"Fox Sport MX",
-	"logo":,
+	"logo":"",
 	"keyid":"eede13105e775cf18e7ad20578ab701c",
 	"key":"806f181c545dcc9b2e8295866d7fcb58",
 	"uri":""	
@@ -378,7 +378,7 @@
 {
 	"id":1231,
 	"nombre":"TNT Sport 3",
-	"logo":,
+	"logo":"",
 	"keyid":"1743cd7101c73e2983ba928fbfcec307",
 	"key":"cf38d2027de3affce951afcbd583458d",
 	"uri":""	

@@ -226,7 +226,7 @@
 {
 	"id":"1084",
 	"nombre":"Disney",
-	"logo":"",
+	"logo":"disney.jpg",
 	"keyid":"7d0c49778bc451d2b5ea44346e72a85d",
 	"key":"d5d5ed40788e07eaf3b0616b6abc9e1e",
 	"uri":""	
@@ -234,7 +234,7 @@
 {
 	"id":"1081",
 	"nombre":"Turbo Discovery",
-	"logo":"",
+	"logo":"discoveryturbo.jpg",
 	"keyid":"d32d815d1f7f5325ba73562534662c92",
 	"key":"75e66a4ed7880c71655d24e52cad3bd3",
 	"uri":""	
@@ -242,7 +242,7 @@
 {
 	"id":"1175",
 	"nombre":"Nickelodeon",
-	"logo":"",
+	"logo":"nick.jpg",
 	"keyid":"cfcaedf675745b9c81e5a55bde8f530b",
 	"key":"240ec219dd71670750f37afe83fead16",
 	"uri":""	
@@ -250,7 +250,7 @@
 {
 	"id":"1243",
 	"nombre":"Universal",
-	"logo":"",
+	"logo":"universal.jpg",
 	"keyid":"3a2cfe6f84f5573c82277af6ceb23c51",
 	"key":"6f72430eef6b803f2b266da1f4eadc9a",
 	"uri":""	
@@ -258,7 +258,7 @@
 {
 	"id":"1147",
 	"nombre":"History 2",
-	"logo":"",
+	"logo":"history2.jpg",
 	"keyid":"98bf1d510cb45145942e5d4c1d5f211d",
 	"key":"d6d518949cf734c3e03328dda5b45966",
 	"uri":""	
@@ -266,7 +266,7 @@
 {
 	"id":"1196",
 	"nombre":"Star Channel",
-	"logo":"",
+	"logo":"starchannel.jpg",
 	"keyid":"7c38d9310d3c5b46a37a39bbec6dd68a",
 	"key":"f4333dfb0e708ec9865b9a6ff2a8e068",
 	"uri":""	
@@ -274,7 +274,7 @@
 {
 	"id":"1012",
 	"nombre":"Animal Planet",
-	"logo":"",
+	"logo":"animalplanet.jpg",
 	"keyid":"149c371df27a56a18805272041381592",
 	"key":"618b752d33c3e44420219b5c18b0f748",
 	"uri":""	
@@ -282,7 +282,7 @@
 {
 	"id":"1181",
 	"nombre":"Paramount",
-	"logo":"",
+	"logo":"paramount.jpg",
 	"keyid":"68188b3bb79453cab7b26ee929a25ed4",
 	"key":"610c951737cb9e221f07c986b6c66f7d",
 	"uri":""	
@@ -290,7 +290,7 @@
 {
 	"id":"1093",
 	"nombre":"Canal Gourmet",
-	"logo":"",
+	"logo":"el gourmet.jpg",
 	"keyid":"afb378efc4c937999a9237a734f9a67a",
 	"key":"3b6ca02e5b0589cab0dd32db45308884",
 	"uri":""	
@@ -298,7 +298,7 @@
 {
 	"id":"1076",
 	"nombre":"Discovery",
-	"logo":"",
+	"logo":"discoverychannel.jpg",
 	"keyid":"aab6b4fdb2e15bef8ef07c397b057e60",
 	"key":"e42c375f8304be0563aea9b38eda1f76",
 	"uri":""	
@@ -306,7 +306,7 @@
 {
 	"id":"1074",
 	"nombre":"HyH Discovery",
-	"logo":"",
+	"logo":"hym.jpg",
 	"keyid":"cba19074379a5b3c875cd1ace01b6cbe",
 	"key":"d9549830c29d5ff0c5c701036eb9cba4",
 	"uri":""	
@@ -314,7 +314,7 @@
 {
 	"id":"1148",
 	"nombre":"History",
-	"logo":"",
+	"logo":"history.jpg",
 	"keyid":"0dc64f9b19ab51ae88959afec96e7631",
 	"key":"ef1d0894a936f7393ec7bfa38ff618cb",
 	"uri":""	

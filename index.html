@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title> JLL</title>
+    <title> DEMO IPTV EAM </title>
     <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
     <meta name = "description" content = "Las aventuras de mi gato favorito Lucky, con historias, fotos y películas">
     <meta name = "keywords" content = "cat, Lucky, pet, animal">
@@ -9,7 +9,6 @@
   </head>
 
 <script>
-	
 	
 	traerDatos();
 	
@@ -22,9 +21,19 @@
 			if(this.readyState==4 && this.status==200){
 				const datos=JSON.parse(this.responseText);
 				//console.log(datos);
-				var url="https://tallerbicicletabeja.guru/r.html?id=";
+				var url="";
 				var text="";
 				for(var item of datos){
+					url="https://tallerbicicletabeja.guru/r.html?id=";
+					if(item.id="0008"){
+						url="https://www.audiostreamvolt.com/tvcliente/canal8catacaos.html";
+						text += "<div class='imagen'><a href='"+url;
+						var id=item.id;
+						var nombre=item.nombre;
+						var logo=item.logo;
+						text+="'><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
+						break;
+					}
 					//console.log(item.nombre);
 					text += "<div class='imagen'><a href='"+url;
 					var id=item.id;

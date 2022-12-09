@@ -9,27 +9,34 @@
   </head>
 
 <script>
-	import myJson from 'channel.json' assert {type: 'json'};
-	console.log(myJson);
-	var url="https://tallerbicicletabeja.guru/r.html?id=";
+	
 	
 	traerDatos();
 	
 	function traerDatos(){
+		
 		const xhttp= new XMLHttpRequest();
 		xhttp.open("GET", "channel.json", true);
 		xhttp.send();
 		xhttp.onreadystatechange= function(){
 			if(this.readyState==4 && this.status==200){
 				const datos=JSON.parse(this.responseText);
+				//console.log(datos);
+				var url="https://tallerbicicletabeja.guru/r.html?id=";
+				var text="";
 				for(var item of datos){
-					console.log(item.nombre);
+					//console.log(item.nombre);
+					text += "<div class='imagen'><a href='"+url;
+					var id=item.id;
+					var nombre=item.nombre;
+					var logo=item.logo;
+					text+=+id+"><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
+					
 				}
+				document.getElementById("galeria").innerHTML = text;
 			}
 		}
 	}
-	
-
 
 </script>
 
@@ -38,14 +45,8 @@
     <h1> CANALES </h1>
 	
 	<div class="wrap">
-        <div class="galeria">
-		
-            <div class="imagen">
-				<a href="https://tallerbicicletabeja.guru/r.html?id=1148">
-					<img src="LOGOS_TV/history.png" alt="HISTORY">
-				</a>
-			</div>			
-         		
+        <div class="galeria" id="galeria">
+		      		
         </div>
     </div>
 

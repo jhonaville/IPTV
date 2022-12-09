@@ -16,6 +16,166 @@
 	"uri":""	
 },
 {
+	"id":"1227",
+	"nombre":"TNT",
+	"logo":"tnt.jpg",
+	"keyid":"2bdcf12a2d68305db6c5a1521efd11c7",
+	"key":"ff22ccb2e8b75305f634ec90d18dc01c",
+	"uri":""	
+},
+{
+	"id":"1148",
+	"nombre":"History",
+	"logo":"history.jpg",
+	"keyid":"0dc64f9b19ab51ae88959afec96e7631",
+	"key":"ef1d0894a936f7393ec7bfa38ff618cb",
+	"uri":""	
+},
+{
+	"id":"1147",
+	"nombre":"History 2",
+	"logo":"history2.jpg",
+	"keyid":"98bf1d510cb45145942e5d4c1d5f211d",
+	"key":"d6d518949cf734c3e03328dda5b45966",
+	"uri":""	
+},
+{
+	"id":"1211",
+	"nombre":"SYFY",
+	"logo":"syfy.jpg",
+	"keyid":"3f90aafd0ab85c6d92e93114e278917b",
+	"key":"9b1e41e8a55a182f69000bdc9304e3cc",
+	"uri":""	
+},
+{
+	"id":"1248",
+	"nombre":"Warner Bros",
+	"logo":"warner.jpg",
+	"keyid":"56a24732c7c558a0b244dc9d5f910f87",
+	"key":"61dfef81cee11cb419a6120270b9587b",
+	"uri":""	
+},
+{
+	"id":"1249",
+	"nombre":"Willax PE",
+	"logo":"willax.jpg",
+	"keyid":"e0140e8c60d2362a9982f97276d0e1a4",
+	"key":"f682dcb20c7068275840411916b79d85",
+	"uri":""	
+},
+{
+	"id":"1144",
+	"nombre":"HGTV",
+	"logo":"hgtv.jpg",
+	"keyid":"bdfac486d5255d2396945102d1d3884f",
+	"key":"8c46e4e0890780d7816e3888b7c738c7",
+	"uri":""	
+},
+{
+	"id":"1190",
+	"nombre":"Sony",
+	"logo":"sony.jpg",
+	"keyid":"1010b99fb124540aaa475a41259751eb",
+	"key":"1975c6bcc9566a6e94ab263dc8f04b57",
+	"uri":""	
+},
+{
+	"id":"1087",
+	"nombre":"Disney Jr",
+	"logo":"disney junior.jpg",
+	"keyid":"a07d8bfe2f9956f28ca11466b4f520d5",
+	"key":"11fdd8900d1eba9a6c95551f418dbf07",
+	"uri":""	
+},
+{
+	"id":"1084",
+	"nombre":"Disney",
+	"logo":"Disney Channel.jpg",
+	"keyid":"7d0c49778bc451d2b5ea44346e72a85d",
+	"key":"d5d5ed40788e07eaf3b0616b6abc9e1e",
+	"uri":""	
+},
+{
+	"id":"1081",
+	"nombre":"Turbo Discovery",
+	"logo":"discoveryturbo.jpg",
+	"keyid":"d32d815d1f7f5325ba73562534662c92",
+	"key":"75e66a4ed7880c71655d24e52cad3bd3",
+	"uri":""	
+},
+{
+	"id":"1175",
+	"nombre":"Nickelodeon",
+	"logo":"nick.jpg",
+	"keyid":"cfcaedf675745b9c81e5a55bde8f530b",
+	"key":"240ec219dd71670750f37afe83fead16",
+	"uri":""	
+},
+{
+	"id":"1243",
+	"nombre":"Universal",
+	"logo":"universal.jpg",
+	"keyid":"3a2cfe6f84f5573c82277af6ceb23c51",
+	"key":"6f72430eef6b803f2b266da1f4eadc9a",
+	"uri":""	
+},
+{
+	"id":"1196",
+	"nombre":"Star Channel",
+	"logo":"starchannel.jpg",
+	"keyid":"7c38d9310d3c5b46a37a39bbec6dd68a",
+	"key":"f4333dfb0e708ec9865b9a6ff2a8e068",
+	"uri":""	
+},
+{
+	"id":"1012",
+	"nombre":"Animal Planet",
+	"logo":"animalplanet.jpg",
+	"keyid":"149c371df27a56a18805272041381592",
+	"key":"618b752d33c3e44420219b5c18b0f748",
+	"uri":""	
+},
+{
+	"id":"1181",
+	"nombre":"Paramount",
+	"logo":"paramount.jpg",
+	"keyid":"68188b3bb79453cab7b26ee929a25ed4",
+	"key":"610c951737cb9e221f07c986b6c66f7d",
+	"uri":""	
+},
+{
+	"id":"1093",
+	"nombre":"Canal Gourmet",
+	"logo":"el gourmet.jpg",
+	"keyid":"afb378efc4c937999a9237a734f9a67a",
+	"key":"3b6ca02e5b0589cab0dd32db45308884",
+	"uri":""	
+},
+{
+	"id":"1076",
+	"nombre":"Discovery",
+	"logo":"discoverychannel.jpg",
+	"keyid":"aab6b4fdb2e15bef8ef07c397b057e60",
+	"key":"e42c375f8304be0563aea9b38eda1f76",
+	"uri":""	
+},
+{
+	"id":"1074",
+	"nombre":"HyH Discovery",
+	"logo":"hyh.jpg",
+	"keyid":"cba19074379a5b3c875cd1ace01b6cbe",
+	"key":"d9549830c29d5ff0c5c701036eb9cba4",
+	"uri":""	
+},
+{
+	"id":"1045",
+	"nombre":"Cine Latino",
+	"logo":"cinelatino.jpg",
+	"keyid":"14c6468aad565259a32023577ac79a39",
+	"key":"f31842f9921a41263e5e66fd4e00cc71",
+	"uri":""	
+},
+{
 	"id":"1069",
 	"nombre":"DIRECTV",
 	"logo":"directv.jpg",
@@ -168,14 +328,6 @@
 	"uri":""	
 },
 {
-	"id":"1211",
-	"nombre":"SYFY",
-	"logo":"syfy.jpg",
-	"keyid":"3f90aafd0ab85c6d92e93114e278917b",
-	"key":"9b1e41e8a55a182f69000bdc9304e3cc",
-	"uri":""	
-},
-{
 	"id":"1079",
 	"nombre":"Discovery kids",
 	"logo":"Discovery Kids.jpg",
@@ -200,150 +352,6 @@
 	"uri":""	
 },
 {
-	"id":"1144",
-	"nombre":"HGTV",
-	"logo":"hgtv.jpg",
-	"keyid":"bdfac486d5255d2396945102d1d3884f",
-	"key":"8c46e4e0890780d7816e3888b7c738c7",
-	"uri":""	
-},
-{
-	"id":"1190",
-	"nombre":"Sony",
-	"logo":"sony.jpg",
-	"keyid":"1010b99fb124540aaa475a41259751eb",
-	"key":"1975c6bcc9566a6e94ab263dc8f04b57",
-	"uri":""	
-},
-{
-	"id":"1087",
-	"nombre":"Disney Jr",
-	"logo":"disney junior.jpg",
-	"keyid":"a07d8bfe2f9956f28ca11466b4f520d5",
-	"key":"11fdd8900d1eba9a6c95551f418dbf07",
-	"uri":""	
-},
-{
-	"id":"1084",
-	"nombre":"Disney",
-	"logo":"Disney Channel.jpg",
-	"keyid":"7d0c49778bc451d2b5ea44346e72a85d",
-	"key":"d5d5ed40788e07eaf3b0616b6abc9e1e",
-	"uri":""	
-},
-{
-	"id":"1081",
-	"nombre":"Turbo Discovery",
-	"logo":"discoveryturbo.jpg",
-	"keyid":"d32d815d1f7f5325ba73562534662c92",
-	"key":"75e66a4ed7880c71655d24e52cad3bd3",
-	"uri":""	
-},
-{
-	"id":"1175",
-	"nombre":"Nickelodeon",
-	"logo":"nick.jpg",
-	"keyid":"cfcaedf675745b9c81e5a55bde8f530b",
-	"key":"240ec219dd71670750f37afe83fead16",
-	"uri":""	
-},
-{
-	"id":"1243",
-	"nombre":"Universal",
-	"logo":"universal.jpg",
-	"keyid":"3a2cfe6f84f5573c82277af6ceb23c51",
-	"key":"6f72430eef6b803f2b266da1f4eadc9a",
-	"uri":""	
-},
-{
-	"id":"1147",
-	"nombre":"History 2",
-	"logo":"history2.jpg",
-	"keyid":"98bf1d510cb45145942e5d4c1d5f211d",
-	"key":"d6d518949cf734c3e03328dda5b45966",
-	"uri":""	
-},
-{
-	"id":"1196",
-	"nombre":"Star Channel",
-	"logo":"starchannel.jpg",
-	"keyid":"7c38d9310d3c5b46a37a39bbec6dd68a",
-	"key":"f4333dfb0e708ec9865b9a6ff2a8e068",
-	"uri":""	
-},
-{
-	"id":"1012",
-	"nombre":"Animal Planet",
-	"logo":"animalplanet.jpg",
-	"keyid":"149c371df27a56a18805272041381592",
-	"key":"618b752d33c3e44420219b5c18b0f748",
-	"uri":""	
-},
-{
-	"id":"1181",
-	"nombre":"Paramount",
-	"logo":"paramount.jpg",
-	"keyid":"68188b3bb79453cab7b26ee929a25ed4",
-	"key":"610c951737cb9e221f07c986b6c66f7d",
-	"uri":""	
-},
-{
-	"id":"1093",
-	"nombre":"Canal Gourmet",
-	"logo":"el gourmet.jpg",
-	"keyid":"afb378efc4c937999a9237a734f9a67a",
-	"key":"3b6ca02e5b0589cab0dd32db45308884",
-	"uri":""	
-},
-{
-	"id":"1076",
-	"nombre":"Discovery",
-	"logo":"discoverychannel.jpg",
-	"keyid":"aab6b4fdb2e15bef8ef07c397b057e60",
-	"key":"e42c375f8304be0563aea9b38eda1f76",
-	"uri":""	
-},
-{
-	"id":"1074",
-	"nombre":"HyH Discovery",
-	"logo":"hyh.jpg",
-	"keyid":"cba19074379a5b3c875cd1ace01b6cbe",
-	"key":"d9549830c29d5ff0c5c701036eb9cba4",
-	"uri":""	
-},
-{
-	"id":"1148",
-	"nombre":"History",
-	"logo":"history.jpg",
-	"keyid":"0dc64f9b19ab51ae88959afec96e7631",
-	"key":"ef1d0894a936f7393ec7bfa38ff618cb",
-	"uri":""	
-},
-{
-	"id":"1248",
-	"nombre":"Warner Bros",
-	"logo":"warner.jpg",
-	"keyid":"56a24732c7c558a0b244dc9d5f910f87",
-	"key":"61dfef81cee11cb419a6120270b9587b",
-	"uri":""	
-},
-{
-	"id":"1249",
-	"nombre":"Willax PE",
-	"logo":"willax.jpg",
-	"keyid":"e0140e8c60d2362a9982f97276d0e1a4",
-	"key":"f682dcb20c7068275840411916b79d85",
-	"uri":""	
-},
-{
-	"id":"1045",
-	"nombre":"Cine Latino",
-	"logo":"cinelatino.jpg",
-	"keyid":"14c6468aad565259a32023577ac79a39",
-	"key":"f31842f9921a41263e5e66fd4e00cc71",
-	"uri":""	
-},
-{
 	"id":"1134",
 	"nombre":"Gol TV",
 	"logo":"goltv.jpg",
@@ -357,14 +365,6 @@
 	"logo":"espnextra.jpg",
 	"keyid":"66da31070eac58fcadb911804917ea28",
 	"key":"886d612fb16aceb172db68fd3016a737",
-	"uri":""	
-},
-{
-	"id":"1227",
-	"nombre":"TNT",
-	"logo":"tnt.jpg",
-	"keyid":"2bdcf12a2d68305db6c5a1521efd11c7",
-	"key":"ff22ccb2e8b75305f634ec90d18dc01c",
 	"uri":""	
 },
 {

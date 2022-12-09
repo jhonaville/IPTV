@@ -33,7 +33,7 @@
 },
 {
 	"id":"1233",
-	"nombre":"TNT SPORT",
+	"nombre":"TNT SPORTS",
 	"logo":"tntsports.jpg",
 	"keyid":"c4697bf458da52f8b96b36cce761d571",
 	"key":"a4dee77615279c858b19e5bb69ab6755",
@@ -90,7 +90,7 @@
 {
 	"id":"1118",
 	"nombre":"Fox SPorts",
-	"logo":"",
+	"logo":"foxsports.jpg",
 	"keyid":"76be81041e7133a38457f097d2b0041c",
 	"key":"8ced846c9effd56d7e2a9276224bb3c5",
 	"uri":""	
@@ -98,7 +98,7 @@
 {
 	"id":"1123",
 	"nombre":"Fox SPorts 3",
-	"logo":"",
+	"logo":"foxsports3.jpg",
 	"keyid":"2901c41dbfc85aa6a26db29cc56bc2c6",
 	"key":"9e1d0809b5e966987deaed55fd2631ad",
 	"uri":""	
@@ -106,7 +106,7 @@
 {
 	"id":"1232",
 	"nombre":"TNT Sport HD",
-	"logo":"",
+	"logo":"tntsports.jpg",
 	"keyid":"1b9984dc66b259fe8ae597cb4fc1f4c3",
 	"key":"fdbbf5a39109349d7b6a997e83fb9e4b",
 	"uri":""	
@@ -114,7 +114,7 @@
 {
 	"id":"1157",
 	"nombre":"Latina PE",
-	"logo":"",
+	"logo":"latinape.jpg",
 	"keyid":"174f5f2ee8193624bec9dd8e5d507a64",
 	"key":"8ea131613f968b9c2b07d2d08ce5ef44",
 	"uri":""	
@@ -122,7 +122,7 @@
 {
 	"id":"1099",
 	"nombre":"ESPN 2",
-	"logo":"",
+	"logo":"espn2.jpg",
 	"keyid":"933de8e915535ae18c2558a5a76318c9",
 	"key":"e1fc1eed4eae83e0dc1b3705cb62ca64",
 	"uri":""	
@@ -130,7 +130,7 @@
 {
 	"id":"1103",
 	"nombre":"ESPN 3",
-	"logo":"",
+	"logo":"espn3.jpg",
 	"keyid":"f91c485f605b337cab75d446604d5dfc",
 	"key":"933c006497039ce8b345d53a1131d8c4",
 	"uri":""	
@@ -146,7 +146,7 @@
 {
 	"id":"1217",
 	"nombre":"TELEMUNDO",
-	"logo":"",
+	"logo":"telemundo.jpg",
 	"keyid":"576b5361b6273d2fbb14aae6e8eb646a",
 	"key":"1e0c5591f570116dbf9f22da26d17226",
 	"uri":""	
@@ -154,7 +154,7 @@
 {
 	"id":"1017",
 	"nombre":"ATV+ PE",
-	"logo":"",
+	"logo":"atv+.jpg",
 	"keyid":"a85710136cd7392dabdaf4e2d7169b5f",
 	"key":"dae80dc1e63aff5975cce0f302870b79",
 	"uri":""	
@@ -162,7 +162,7 @@
 {
 	"id":"1027",
 	"nombre":"CARTOONITO",
-	"logo":"",
+	"logo":"cartoonito.jpg",
 	"keyid":"6d842222f1715a59ad24623c21745344",
 	"key":"87061469dad96757078704a03ee3c67f",
 	"uri":""	
@@ -170,7 +170,7 @@
 {
 	"id":"1211",
 	"nombre":"SYFY",
-	"logo":"",
+	"logo":"syfy.jpg",
 	"keyid":"3f90aafd0ab85c6d92e93114e278917b",
 	"key":"9b1e41e8a55a182f69000bdc9304e3cc",
 	"uri":""	
@@ -178,7 +178,7 @@
 {
 	"id":"1079",
 	"nombre":"Discovery kids",
-	"logo":"",
+	"logo":"discoverykids.jpg",
 	"keyid":"a3b91f95dc9152ce8fa34a7fed103b70",
 	"key":"694eb12c6ca401b454bd742c374a50c0",
 	"uri":""	
@@ -186,7 +186,7 @@
 {
 	"id":"1053",
 	"nombre":"Comedy Central",
-	"logo":"",
+	"logo":"comedycentral.jpg",
 	"keyid":"cef48e7cfdbd570187a39bff3e433f05",
 	"key":"83fbc8198927fdc469e7968d7503c4f6",
 	"uri":""	
@@ -194,7 +194,7 @@
 {
 	"id":"1223",
 	"nombre":"TLC",
-	"logo":"",
+	"logo":"tlc.jpg",
 	"keyid":"636d0261f1e750868791e4262c83f448",
 	"key":"2158dcf8bee037a4be7bebd5be2f3e9a",
 	"uri":""	
@@ -202,7 +202,7 @@
 {
 	"id":"1144",
 	"nombre":"HGTV",
-	"logo":"",
+	"logo":"hgtv.jpg",
 	"keyid":"bdfac486d5255d2396945102d1d3884f",
 	"key":"8c46e4e0890780d7816e3888b7c738c7",
 	"uri":""	
@@ -210,7 +210,7 @@
 {
 	"id":"1190",
 	"nombre":"Sony",
-	"logo":"",
+	"logo":"sony.jpg",
 	"keyid":"1010b99fb124540aaa475a41259751eb",
 	"key":"1975c6bcc9566a6e94ab263dc8f04b57",
 	"uri":""	
@@ -218,7 +218,7 @@
 {
 	"id":"1087",
 	"nombre":"Disney Jr",
-	"logo":"",
+	"logo":"disneyjr.jpg",
 	"keyid":"a07d8bfe2f9956f28ca11466b4f520d5",
 	"key":"11fdd8900d1eba9a6c95551f418dbf07",
 	"uri":""	

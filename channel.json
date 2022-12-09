@@ -18,7 +18,7 @@
 {
 	"id":"1069",
 	"nombre":"DIRECTV",
-	"logo":"",
+	"logo":"directv.jpg",
 	"keyid":"a8cf52be0eb358c9a8bfcd1fc94d7cb5",
 	"key":"834c7082d28d85f5da38dde949b66c9a",
 	"uri":""	
@@ -26,7 +26,7 @@
 {
 	"id":"1109",
 	"nombre":"ESPN",
-	"logo":"",
+	"logo":"espn.jpg",
 	"keyid":"70ce8ec0bda25664b32550e1d377a480",
 	"key":"2b91247bd45364eb6ab5d4c2c71caeb0",
 	"uri":""	
@@ -34,7 +34,7 @@
 {
 	"id":"1233",
 	"nombre":"TNT SPORT",
-	"logo":"",
+	"logo":"tntsports.jpg",
 	"keyid":"c4697bf458da52f8b96b36cce761d571",
 	"key":"a4dee77615279c858b19e5bb69ab6755",
 	"uri":""	
@@ -42,7 +42,7 @@
 {
 	"id":"1105",
 	"nombre":"ESPN 2",
-	"logo":"",
+	"logo":"espn2.jpg",
 	"keyid":"e97438334f9259b5879ffff21631f2c4",
 	"key":"20a2c7f102fd3e96bacda90c24df3e95",
 	"uri":""	
@@ -50,7 +50,7 @@
 {
 	"id":"1071",
 	"nombre":"DSPORT +",
-	"logo":"",
+	"logo":"dsports+.jpg",
 	"keyid":"f19c3a8c638d52c2ab77b9566bcb2996",
 	"key":"e4fabf39d23cd6557fa71b6e754ef1e7",
 	"uri":""	
@@ -58,7 +58,7 @@
 {
 	"id":"1251",
 	"nombre":"WIN SPORT+",
-	"logo":"",
+	"logo":"winsport+.jpg",
 	"keyid":"34d62b22efc63f659eac5ba82289882d",
 	"key":"696de7a82257ddb51ed3fdec04b6ec8b",
 	"uri":""	
@@ -66,15 +66,15 @@
 {
 	"id":"1106",
 	"nombre":"ESPN 3",
-	"logo":"",
+	"logo":"espn3.jpg",
 	"keyid":"2444f7f19b29352eb6d1c7f9d8f71d59",
 	"key":"027fc4f3b6275111c0c8b5ae84933ea8",
 	"uri":""	
 },
 {
 	"id":"1117",
-	"nombre":"Fox Sport 1",
-	"logo":"",
+	"nombre":"Fox Sport",
+	"logo":"foxsports.jpg",
 	"keyid":"5804b7a24ca1303d8511b6d49278610c",
 	"key":"fc0a63fd4fb80fd67ad25646857082f5",
 	"uri":""	
@@ -82,7 +82,7 @@
 {
 	"id":"1125",
 	"nombre":"ESPN Premium",
-	"logo":"",
+	"logo":"espnextra.jpg",
 	"keyid":"4cb49df341423cb597bf3e79b78f2a52",
 	"key":"11ad69d2c84f41dbb520abfe38b19fe7",
 	"uri":""	

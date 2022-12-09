@@ -10,7 +10,7 @@
 {
 	"id":"1061",
 	"nombre":"DSPORT",
-	"logo":"dsport.jpg",
+	"logo":"dsports.jpg",
 	"keyid":"7119069b99015b4eb9ee4300577399e2",
 	"key":"b89827cc970cd78da882ffca3504c774",
 	"uri":""	
@@ -50,7 +50,7 @@
 {
 	"id":"1071",
 	"nombre":"DSPORT +",
-	"logo":"dsports+.jpg",
+	"logo":"dsport+.jpg",
 	"keyid":"f19c3a8c638d52c2ab77b9566bcb2996",
 	"key":"e4fabf39d23cd6557fa71b6e754ef1e7",
 	"uri":""	
@@ -58,7 +58,7 @@
 {
 	"id":"1251",
 	"nombre":"WIN SPORT+",
-	"logo":"winsport+.jpg",
+	"logo":"winsports.jpg",
 	"keyid":"34d62b22efc63f659eac5ba82289882d",
 	"key":"696de7a82257ddb51ed3fdec04b6ec8b",
 	"uri":""	
@@ -90,7 +90,7 @@
 {
 	"id":"1118",
 	"nombre":"Fox SPorts",
-	"logo":"foxsports.jpg",
+	"logo":"foxsports2.jpg",
 	"keyid":"76be81041e7133a38457f097d2b0041c",
 	"key":"8ced846c9effd56d7e2a9276224bb3c5",
 	"uri":""	
@@ -178,7 +178,7 @@
 {
 	"id":"1079",
 	"nombre":"Discovery kids",
-	"logo":"discoverykids.jpg",
+	"logo":"Discovery Kids.jpg",
 	"keyid":"a3b91f95dc9152ce8fa34a7fed103b70",
 	"key":"694eb12c6ca401b454bd742c374a50c0",
 	"uri":""	
@@ -218,7 +218,7 @@
 {
 	"id":"1087",
 	"nombre":"Disney Jr",
-	"logo":"disneyjr.jpg",
+	"logo":"disney junior.jpg",
 	"keyid":"a07d8bfe2f9956f28ca11466b4f520d5",
 	"key":"11fdd8900d1eba9a6c95551f418dbf07",
 	"uri":""	
@@ -226,7 +226,7 @@
 {
 	"id":"1084",
 	"nombre":"Disney",
-	"logo":"disney.jpg",
+	"logo":"Disney Channel.jpg",
 	"keyid":"7d0c49778bc451d2b5ea44346e72a85d",
 	"key":"d5d5ed40788e07eaf3b0616b6abc9e1e",
 	"uri":""	
@@ -306,7 +306,7 @@
 {
 	"id":"1074",
 	"nombre":"HyH Discovery",
-	"logo":"hym.jpg",
+	"logo":"hyh.jpg",
 	"keyid":"cba19074379a5b3c875cd1ace01b6cbe",
 	"key":"d9549830c29d5ff0c5c701036eb9cba4",
 	"uri":""	
@@ -370,7 +370,7 @@
 {
 	"id":"1115",
 	"nombre":"Fox Sport MX",
-	"logo":"foxsportsmx.jpg",
+	"logo":"foxsports.jpg",
 	"keyid":"eede13105e775cf18e7ad20578ab701c",
 	"key":"806f181c545dcc9b2e8295866d7fcb58",
 	"uri":""	
@@ -378,7 +378,7 @@
 {
 	"id":"1231",
 	"nombre":"TNT Sport 3",
-	"logo":"tntsports3.jpg",
+	"logo":"tntsport3.jpg",
 	"keyid":"1743cd7101c73e2983ba928fbfcec307",
 	"key":"cf38d2027de3affce951afcbd583458d",
 	"uri":""	

@@ -4,3 +4,8 @@
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://cdn4.xaxa.live/keys/dtvuy.json
 https://dtvott-abc.akamaized.net/dash_live_1062/manifest.mpd
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/QMb31rJ/history.png" tvg-group="CIENCIA Y CULTURA", HISTORY
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://raw.githubusercontent.com/jhonaville/IPTV/main/history.json
+https://dtvott-cbc.akamaized.net/dash_live_1148/manifest.mpd

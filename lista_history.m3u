@@ -7,5 +7,5 @@ https://dtvott-abc.akamaized.net/dash_live_1062/manifest.mpd
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/QMb31rJ/history.png" tvg-group="CIENCIA Y CULTURA", HISTORY
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://raw.githubusercontent.com/jhonaville/IPTV/main/history.json
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"ef1d0894a936f7393ec7bfa38ff618cb","kid":"0dc64f9b19ab51ae88959afec96e7631"}],"type":"temporary"}
 https://dtvott-cbc.akamaized.net/dash_live_1148/manifest.mpd

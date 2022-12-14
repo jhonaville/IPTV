@@ -7,5 +7,5 @@ https://cdn.cvattv.com.ar/live/c3eds/VTV_Plus_HD/SA_Live_dash_enc_2A/VTV_Plus_HD
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/QMb31rJ/history.png" tvg-group="CIENCIA Y CULTURA", HISTORY
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://github.com/jhonaville/IPTV/history.json
+#KODIPROP:inputstream.adaptive.license_key=https://jhonaville.github.io/IPTV/history.json
 https://dtvott-cbc.akamaized.net/dash_live_1148/manifest.mpd

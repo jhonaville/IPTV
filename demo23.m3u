@@ -1,0 +1,6 @@
+#EXTM3U list-name="Canales Latinos ðŸ˜" list-image="https://i.ibb.co/y5WvHvw/Tvlogo.png"
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/WsBhsDZ/ar-paramount-channel-m.png" tvg-group="CINE Y SERIES", PARAMOUNT
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://cdn4.xaxa.live/keys/paramount.json
+https://dtvott-cbc.akamaized.net/dash_live_1181/manifest.mpd

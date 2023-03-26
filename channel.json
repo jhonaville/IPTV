@@ -1,5 +1,21 @@
 [
 {
+	"id":"1272",
+	"nombre":"LIGA 1 MAX - PE",
+	"logo":"liga1max.jpg",
+	"keyid":"",
+	"key":"",
+	"uri":""	
+},
+{
+	"id":"1011",
+	"nombre":"AMERICA TV - PE",
+	"logo":"americape.png",
+	"keyid":"",
+	"key":"",
+	"uri":""	
+},
+{
 	"id":"0008",
 	"nombre":"Canal 8 Catacaos",
 	"logo":"canal8catacaos.jpg",

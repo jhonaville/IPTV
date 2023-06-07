@@ -7,7 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel = "icono de acceso directo" href = "/ favicon.ico">
   </head>
-
+<script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+</script>
 <script>
 	
 	traerDatos();
@@ -48,7 +50,57 @@
 			}
 		}
 	}
+var getLang = "";
+var playerInstance = jwplayer("player");
+playerInstance.setup(
+{
+  "playlist": [
+    {
+      "sources": [
+        null,
+        {
+          "default": false,
+          "type": "mpd",
+          "file": "https://1109-vos.dtvott.com/DASH/manifest.mpd",
+          "drm": {
+            "clearkey": {
+              "keyId": "534d488852b3330284307d1a3ca0fd3b",
+              "key": "2d1d2a12454b682df197ff26ff5253a5"
+            }
+          },
+          "label": "1"
+        },
+        {
+          "default": true,
+          "type": "mpd",
+          "file": "https://1109-vos.dtvott.com/DASH/manifest.mpd",
+          "drm": {
+            "widevine": {},
+            "playready": {}
+          },
+          "label": "2"
+        }
+      ]
+    }
+  ],
+  "autostart": true
+}
+);
 
+if (getLang == "") {
+	getLang = 0;
+}
+
+jwplayer().on('play', function(e) {
+  jwplayer().setCurrentAudioTrack(getLang);
+});
+	
+	
+	
+	
+	
+	
+	
 </script>
 
   <body>
@@ -70,6 +122,8 @@
 
 	 
 </div>
+	
+	<div id="player"></div>
   </body>
 
 </html>

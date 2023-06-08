@@ -122,7 +122,34 @@ if (getLang == "") {
 jwplayer().on('play', function(e) {
   jwplayer().setCurrentAudioTrack(getLang);
 });
-		</script>
+		
+var rightPressed = false;
+var leftPressed = false;
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);	
+		
+function keyDownHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = true;
+	    alert("derecha");
+    }
+    else if(e.keyCode == 37) {
+	    alert("izq");
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if(e.keyCode == 39) {
+	    alert("derecha");
+        rightPressed = false;
+    }
+    else if(e.keyCode == 37) {
+	    alert("izq");
+        leftPressed = false;
+    }
+}
+</script>
   </body>
 
 </html>

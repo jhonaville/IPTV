@@ -88,13 +88,13 @@ playerInstance.setup(
     {
       "sources": [
         {
-          "default": false,
+          "default": true,
           "type": "mpd",
-          "file": "https://1193-vos.dtvott.com/DASH/manifest.mpd",
+          "file": "https://1109-vos.dtvott.com/DASH/manifest.mpd",
           "drm": {
             "clearkey": {
-              "keyId": "f3af71d7c21a381fb6f41a1564293b06",
-              "key": "b21e3b466e6d399618bdae6cd9dd5242"
+              "keyId": "534d488852b3330284307d1a3ca0fd3b",
+              "key": "2d1d2a12454b682df197ff26ff5253a5"
             }
           },
           "label": "0"
@@ -102,7 +102,10 @@ playerInstance.setup(
       ]
     }
   ],
-  "autostart": true
+  "autostart": true,
+  "mute": false, 
+  "logo":{ file: "https://images.freeimages.com/fic/images/icons/385/game_stars/256/sonic.png", position: 'top-right' },
+  "sharing": { link: "https://www.neoteo.com/"}
 }
 );
 		

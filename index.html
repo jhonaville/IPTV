@@ -81,43 +81,31 @@
 	<script>    
 	    var getLang = "";
 var playerInstance = jwplayer("player");
+
 playerInstance.setup(
 {
   "playlist": [
     {
       "sources": [
-        null,
         {
           "default": false,
-          "type": "dash",
-          //"file": "https://1193-vos.dtvott.com/DASH/manifest.mpd",
-	"file": "https://dtvott-cbc.akamaized.net/dash_live_1148/manifest.mpd",
+          "type": "mpd",
+          "file": "https://1193-vos.dtvott.com/DASH/manifest.mpd",
           "drm": {
             "clearkey": {
-              //"keyId": "f3af71d7c21a381fb6f41a1564293b06",
-              //"key": "b21e3b466e6d399618bdae6cd9dd5242"
-		     "keyId": "0dc64f9b19ab51ae88959afec96e7631",
-              "key": "ef1d0894a936f7393ec7bfa38ff618cb"
+              "keyId": "f3af71d7c21a381fb6f41a1564293b06",
+              "key": "b21e3b466e6d399618bdae6cd9dd5242"
             }
           },
-          "label": "1"
+          "label": "0"
         },
-        {
-          "default": true,
-          "type": "dash",
-          "file": "https://dtvott-cbc.akamaized.net/dash_live_1148/manifest.mpd",
-          "drm": {
-            "widevine": {},
-            "playready": {}
-          },
-          "label": "2"
-        }
       ]
     }
   ],
   "autostart": true
 }
 );
+		
 
 if (getLang == "") {
 	getLang = 0;

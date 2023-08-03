@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lector de Códigos de Barras y QR</title>
-    <script src="https://cdn.jsdelivr.net/npm/instascan@1.0.1/instascan.min.js"></script>
+  <title>Escanear código de barras y QR</title>
 </head>
 <body>
-    <video id="preview"></video>
-    <script src="script.js"></script>
+  <video id="video" width="300" height="200"></video>
+  <canvas id="canvas" style="display: none;"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.18.3"></script>
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const codeReader = new ZXing.BrowserBarcodeReader();
+
+    codeReader.getVideoInputDevices()
+      .then(videoInputDevices => {
+        codeReader.decodeFromVideoDevice(videoInputDevices[0].deviceId, 'video', (result, err) => {
+          if (result) {
+            console.log('Resultado: ', result.text);
+          }
+          if (err && !(err instanceof ZXing.NotFoundException)) {
+            console.error(err);
+          }
+        });
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  </script>
 </body>
 </html>

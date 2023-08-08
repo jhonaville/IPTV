@@ -32,3 +32,8 @@ body {
     column-gap: 1rem;
     row-gap: 1rem;
 }
+.foco{
+		border-width:10px;
+			border-color:red;
+			border-style: solid;
+}

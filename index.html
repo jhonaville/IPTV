@@ -179,15 +179,30 @@ jwplayer().on('play', function(e) {
 */
 
 var lastX = -1; // Almacenar la última posición X del cursor
+var lastY = -1; // Almacenar la última posición Y del cursor
 
 document.addEventListener('mousemove', function(event) {
   var x = event.clientX; // Posición horizontal actual del cursor
+  var y = event.clientY; // Posición vertical actual del cursor
 
-  if (lastX !== -1 && x > lastX) {
-    // Lógica para manejar el movimiento hacia la derecha
-   // console.log('El cursor se ha movido hacia la derecha.');
-alert('El cursor se ha movido hacia la derecha.');
+  if (lastX !== -1 && lastY !== -1) {
+    if (x > lastX) {
+      console.log('El cursor se ha movido hacia la derecha.');
+    } else if (x < lastX) {
+      console.log('El cursor se ha movido hacia la izquierda.');
+    }
+
+    if (y > lastY) {
+      console.log('El cursor se ha movido hacia abajo.');
+    } else if (y < lastY) {
+      console.log('El cursor se ha movido hacia arriba.');
+    }
   }
+
+  lastX = x; // Actualizar la última posición X
+  lastY = y; // Actualizar la última posición Y
+});
+
 
   lastX = x; // Actualizar la última posición X
 });

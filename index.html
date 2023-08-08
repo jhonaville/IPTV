@@ -46,7 +46,7 @@
 				const datos=JSON.parse(this.responseText);
 				//console.log(datos);
 				var url="";
-				var text="";
+				var text="";var i=1;
 				for(var item of datos){
 					//url="https://tallerbicicletabeja.guru/r.html?id=";
 					//url="https://casaaasasss.today/r.html?id=";
@@ -64,11 +64,15 @@
 						var id="";				
 					}				
 						//console.log(item.nombre);
-						text += "<div class='imagen'><a href='"+url;			
+						text += "<div class='imagen' id=imagen_'+i+'><a href='"+url;i++;			
 						text+=id+"'><img src='LOGOS_TV/"+logo+"' alt='"+nombre+"'></a></div>";
 	
 				}
+				var itemPos="imagen_1";
 				document.getElementById("galeria").innerHTML = text;
+				
+				var elemento = document.getElementById(itemPos);
+				elemento.classList.add('foco');
 			}
 		}
 	}

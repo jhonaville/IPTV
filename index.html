@@ -2,6 +2,7 @@
 <head>
 	
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K97HVWY69V"></script>
+	<script data-minify="1" src="https://canal8tv.pe/wp-content/cache/min/1/v3/current/fluidplayer.min.js?ver=1686156801"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -32,6 +33,7 @@
 	</script>
   </head>
 
+	
 <script>
 	
 	traerDatos();
@@ -103,6 +105,50 @@
     <div class="imagen elemento1"> Algunos de nuestros productos incluyen <span class = "product"> SuperWidgets </span>, <span class = "product"> MegaWidgets </span> y <span class = "product"> WonderWidgets </span> . </div>
 <video width='1280' height='720' id="hls-video"><source data-fluid-hd src="https://live.obslivestream.com/canal8/index.m3u8" type="application/x-mpegURL" /></div>
 	<div id="player"></div>
+
+	  <script>
+    var myFP = fluidPlayer('hls-video',	{
+  modules: {
+        configureHls: (options) => ({
+            maxMaxBufferLength: 30, // Max length of buffered video in seconds
+            startLevel: 2, // Calidad del Thumbnail, que muestra la imagen estatica al cargar el reproductor
+                     })
+    },
+	"layoutControls": {
+controlForwardBackward: {
+                show: true // Default: false
+            },
+               "controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true,
+			"playbackRates": [
+				"x2",
+				"x1.5",
+				"x1",
+				"x0.5"
+			]
+		},
+		"htmlOnPauseBlock": {
+			"html": "Estamos viendo...",
+			"height": "200",
+			"width": "500"
+		},
+		primaryColor: "#28B8ED",
+		"autoPlay": false,
+                "mute": true,
+                 layout: 'default',
+		"allowTheatre": true,
+		"playPauseAnimation": true,
+		"playbackRateEnabled": true,
+		"allowDownload": false,
+		"playButtonShowing": true,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	
+});
+</script>
 	<script>    
 	    var getLang = 1;
 var playerInstance = jwplayer("player");

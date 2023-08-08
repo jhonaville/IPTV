@@ -142,32 +142,55 @@ jwplayer().on('play', function(e) {
   jwplayer().setCurrentAudioTrack(getLang);
 });
 		
-var rightPressed = false;
-var leftPressed = false;
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);	
-		
-function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-	    alert("derecha");
-    }
-    else if(e.keyCode == 37) {
-	    alert("izq");
-        leftPressed = true;
-    }
-}
+// EVENTOS TECLAS CONTROL
+		document.addEventListener('keydown', function(event) {
+  switch (event.key) {
+    case 'ArrowUp':
+      // Lógica para mover el cursor o seleccionar elementos hacia arriba
+		  alert("up");
+      break;
+    case 'ArrowDown':
+      // Lógica para mover el cursor o seleccionar elementos hacia abajo
+      alert("down");break;
+    case 'ArrowLeft':
+      // Lógica para mover el cursor o seleccionar elementos hacia la izquierda
+      alert("left");break;
+    case 'ArrowRight':
+      // Lógica para mover el cursor o seleccionar elementos hacia la derecha
+      alert("right");break;
+    case 'Enter':
+      // Lógica para seleccionar un elemento o confirmar una acción
+      alert("enter");break;
+    case 'Back':
+      // Lógica para retroceder en la navegación o cerrar un menú
+      alert("back");break;
+    case 'Menu':
+      // Lógica para abrir un menú o mostrar opciones
+      alert("menu");break;
+    case 'Play':
+      // Lógica para reproducir contenido multimedia
+      alert("play");break;
+    case 'Pause':
+      // Lógica para pausar contenido multimedia
+      break;
+    case 'Stop':
+      // Lógica para detener la reproducción de contenido multimedia
+      break;
+    case 'VolumeUp':
+      // Lógica para aumentar el volumen
+      alert("volup");break;
+    case 'VolumeDown':
+      // Lógica para disminuir el volumen
+      break;
+    case 'Mute':
+      // Lógica para activar/desactivar el silencio
+      alert("mute");break;
+    // Agrega más casos para otras teclas relevantes según tus necesidades
+  }
+});
 
-function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-	    alert("derecha");
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-	    alert("izq");
-        leftPressed = false;
-    }
-}
+
+//-------------------------
 </script>
   </body>
 

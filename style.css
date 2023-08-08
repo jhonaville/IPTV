@@ -18,7 +18,7 @@ body {
 		.imagen{
 			width: 100%;
 			border-width:thin;
-			border-color:black;
+			border-color:blue;
 			border-style: solid;
 		}
 .imagen img{
@@ -33,7 +33,7 @@ body {
     row-gap: 1rem;
 }
 .foco{
-		border-width:10px;
+		border-width:thin;
 			border-color:red;
 			border-style: solid;
 }

@@ -73,8 +73,8 @@
 				
 				document.getElementById("galeria").innerHTML = text;
 
-				var itemPos="imagen_1";
-				var elemento = document.getElementById(itemPos);
+				var itemPos=document.getElementById('galeria');;
+				var elemento = document.getElementById(itemPos.dataset.foco);
 				elemento.classList.add('foco');
 			}
 		}
@@ -95,7 +95,7 @@
     <h1> CANALES 1.0</h1>
 	
 	<div class="wrap">
-        <div class="galeria" id="galeria">
+        <div class="galeria" id="galeria" data-foco="imagen_1">
 		      		
         </div>
     </div>
@@ -242,6 +242,13 @@ document.addEventListener('mousemove', function(event) {
   if (lastX !== -1 && lastY !== -1) {
     if (x > lastX) {
       console.log('El cursor se ha movido hacia la derecha.');
+	    //MOVER EL FOCO A LA DERECHA
+	    	var elemento = document.getElementById('galeria');
+	    	elemento.dataset.foco = 'imagen_2';
+	    	document.getElementById('imagen_2').classList.add('foco');
+	    //excluir para quitar clase
+		
+	    	
     } else if (x < lastX) {
       console.log('El cursor se ha movido hacia la izquierda.');
     }

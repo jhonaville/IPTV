@@ -221,6 +221,15 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+document.addEventListener('mousemove', function(event) {
+  var x = event.clientX; // Posición horizontal del cursor
+  var y = event.clientY; // Posición vertical del cursor
+
+  // Lógica para manejar los movimientos del cursor
+	alert('Posición del cursor: X=' + x + ', Y=' + y);
+  //console.log('Posición del cursor: X=' + x + ', Y=' + y);
+});
+
 //-------------------------
 </script>
   </body>

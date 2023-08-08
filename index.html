@@ -85,7 +85,7 @@
 
   <body>
 
-    <h1> CANALES </h1>
+    <h1> CANALES 1.0</h1>
 	
 	<div class="wrap">
         <div class="galeria" id="galeria">
@@ -143,7 +143,7 @@ jwplayer().on('play', function(e) {
 });
 		
 // EVENTOS TECLAS CONTROL
-		document.addEventListener('keydown', function(event) {
+		/*document.addEventListener('keydown', function(event) {
   switch (event.key) {
     case 'ArrowUp':
       // Lógica para mover el cursor o seleccionar elementos hacia arriba
@@ -188,7 +188,34 @@ jwplayer().on('play', function(e) {
     // Agrega más casos para otras teclas relevantes según tus necesidades
   }
 });
+*/
+document.addEventListener('keydown', function(event) {
+  // Obtener el código de la tecla presionada
+  var keyCode = event.keyCode || event.which;
 
+  // Verificar si el código de tecla corresponde a una tecla de control de Smart TV
+  switch (keyCode) {
+    case 37: // Código de tecla para la flecha izquierda
+      // Lógica para manejar la tecla de flecha hacia la izquierda
+      alert("leght");break;
+    case 38: // Código de tecla para la flecha arriba
+      // Lógica para manejar la tecla de flecha hacia arriba
+     alert("up"); break;
+    case 39: // Código de tecla para la flecha derecha
+      // Lógica para manejar la tecla de flecha hacia la derecha
+      break;
+    case 40: // Código de tecla para la flecha abajo
+      // Lógica para manejar la tecla de flecha hacia abajo
+      alert("down");break;
+    case 13: // Código de tecla para la tecla "Enter"
+      // Lógica para manejar la tecla "Enter"
+      alert("enter");break;
+    case 8:  // Código de tecla para la tecla "Volver" o "Atrás"
+      // Lógica para manejar la tecla "Volver" o "Atrás"
+      break;
+    // Agrega más casos para otros códigos de tecla relevantes según tus necesidades
+  }
+});
 
 //-------------------------
 </script>

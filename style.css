@@ -33,7 +33,7 @@ body {
     row-gap: 1rem;
 }
 .foco{
-		border-width:thin;
+		border-width:5px;
 			border-color:red;
 			border-style: solid;
 }

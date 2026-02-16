@@ -1,43 +1,172 @@
-<script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Test Scanner POS</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+.scanner-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  border: 3px solid #00ff88;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.scanner-line {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: red;
+  animation: scan 1.8s linear infinite;
+  top: 20%;
+}
+
+@keyframes scan {
+  0% { top: 20%; }
+  50% { top: 75%; }
+  100% { top: 20%; }
+}
+
+#result {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #00ff88;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #00ff88;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Scanner POS</h2>
+
+<div class="scanner-container">
+  <video id="video" autoplay muted playsinline></video>
+  <div class="scanner-overlay"></div>
+  <div class="scanner-line"></div>
+</div>
+
+<p id="result">Esperando escaneo...</p>
+<button onclick="detener()">Detener Cámara</button>
+
+<script type="module">
+
+import { BrowserMultiFormatReader } 
+from 'https://cdn.jsdelivr.net/npm/@zxing/browser@latest/+esm';
+
 const video = document.getElementById("video");
 const result = document.getElementById("result");
 
+let stream;
+let detector;
+let usandoZXing = false;
+let codeReader;
+
 async function iniciar() {
 
-  if (!("BarcodeDetector" in window)) {
-    result.textContent = "Tu navegador no soporta BarcodeDetector";
-    return;
-  }
-
-  const stream = await navigator.mediaDevices.getUserMedia({
+  stream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: "environment" }
   });
 
   video.srcObject = stream;
   await video.play();
 
-  const detector = new BarcodeDetector({
-    formats: ["ean_13", "ean_8", "code_128"]
-  });
+  // 🔥 Opción 1: BarcodeDetector (más rápido)
+  if ("BarcodeDetector" in window) {
 
-  async function detectar() {
-    try {
-      const barcodes = await detector.detect(video);
+    detector = new BarcodeDetector({
+      formats: ["ean_13", "ean_8", "code_128"]
+    });
 
-      if (barcodes.length > 0) {
-        result.textContent = "Resultado: " + barcodes[0].rawValue;
-        navigator.vibrate(200);
+    detectarNativo();
+
+  } else {
+
+    // 🔥 Fallback ZXing
+    usandoZXing = true;
+    codeReader = new BrowserMultiFormatReader();
+
+    codeReader.decodeFromVideoDevice(
+      null,
+      video,
+      (res, err) => {
+        if (res) {
+          mostrarResultado(res.getText());
+        }
       }
+    );
+  }
+}
 
-    } catch (err) {
-      console.error(err);
+async function detectarNativo() {
+  try {
+    const barcodes = await detector.detect(video);
+
+    if (barcodes.length > 0) {
+      mostrarResultado(barcodes[0].rawValue);
     }
 
-    requestAnimationFrame(detectar);
+  } catch (err) {
+    console.error(err);
   }
 
-  detectar();
+  requestAnimationFrame(detectarNativo);
+}
+
+function mostrarResultado(texto) {
+  result.textContent = "Resultado: " + texto;
+  navigator.vibrate?.(200);
+}
+
+function detener() {
+  if (stream) {
+    stream.getTracks().forEach(track => track.stop());
+  }
+
+  if (usandoZXing && codeReader) {
+    codeReader.reset();
+  }
+
+  result.textContent = "Cámara detenida";
 }
 
 iniciar();
+
 </script>
+
+</body>
+</html>

@@ -3,30 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login con PIN</title>
+<title>Login con PIN y selección de usuario</title>
 <style>
-  body { font-family: Arial, sans-serif; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; margin:0; background:#f2f2f2;}
-  .login-box { background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; }
-  h2 { margin-bottom:10px; }
-  .pin-display { font-size:24px; letter-spacing:10px; margin:10px 0; min-height:30px; }
-  .keypad { display:grid; grid-template-columns:repeat(3,60px); gap:10px; justify-content:center; margin-top:10px; }
-  .key { background:#007bff; color:#fff; font-size:20px; padding:15px; border-radius:5px; cursor:pointer; user-select:none; }
-  .key:active { background:#0056b3; }
-  .action { background:#28a745; grid-column:span 3; margin-top:10px; }
-  .message { margin-top:10px; color:red; min-height:20px; }
+body { font-family: Arial, sans-serif; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; margin:0; background:#f2f2f2;}
+.login-box { background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; width: 300px; }
+h2 { margin-bottom:10px; }
+select { width: 100%; padding:10px; font-size:16px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; }
+.pin-display { font-size:24px; letter-spacing:10px; margin:10px 0; min-height:30px; }
+.keypad { display:grid; grid-template-columns:repeat(3,60px); gap:10px; justify-content:center; margin-top:10px; }
+.key { background:#007bff; color:#fff; font-size:20px; padding:15px; border-radius:5px; cursor:pointer; user-select:none; }
+.key:active { background:#0056b3; }
+.action { background:#28a745; grid-column:span 3; margin-top:10px; }
+.message { margin-top:10px; color:red; min-height:20px; }
 </style>
 </head>
 <body>
 
 <div class="login-box">
   <h2>Ingrese su PIN</h2>
+
+  <select id="userSelect">
+    <option value="">Seleccione usuario</option>
+    <option value="juan">Juan - Vendedor</option>
+    <option value="maria">Maria - Vendedora</option>
+    <option value="admin">Admin - Administrador</option>
+  </select>
+
   <div class="pin-display" id="pinDisplay"></div>
   <div class="keypad" id="keypad"></div>
   <div class="message" id="message"></div>
 </div>
 
 <script>
-const PIN_HASH = "ef92b778ba5c53fa2b3f96b2f3edaf0b2f06cbbff8ff33e8fa64e49e11c2f5c4"; // Hash simulado de '1234' con SHA-256
+const users = {
+  juan: { pinHash: "ef92b778ba5c53fa2b3f96b2f3edaf0b2f06cbbff8ff33e8fa64e49e11c2f5c4", role: "vendedor" }, // PIN '1234'
+  maria: { pinHash: "ef92b778ba5c53fa2b3f96b2f3edaf0b2f06cbbff8ff33e8fa64e49e11c2f5c4", role: "vendedor" },
+  admin: { pinHash: "ef92b778ba5c53fa2b3f96b2f3edaf0b2f06cbbff8ff33e8fa64e49e11c2f5c4", role: "administrador" }
+};
+
 let enteredPin = [];
 const maxDigits = 4;
 let attempts = 0;
@@ -35,11 +49,12 @@ const maxAttempts = 3;
 const pinDisplay = document.getElementById('pinDisplay');
 const keypad = document.getElementById('keypad');
 const message = document.getElementById('message');
+const userSelect = document.getElementById('userSelect');
 
-// Función para mezclar números aleatoriamente
+// Mezclar array
 function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+  for (let i = array.length -1; i>0; i--) {
+    const j = Math.floor(Math.random()* (i+1));
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
@@ -57,21 +72,19 @@ function generateKeypad() {
     keypad.appendChild(key);
   });
 
-  // Botón de borrar
   const clearKey = document.createElement('div');
   clearKey.className = 'key action';
   clearKey.textContent = 'BORRAR';
-  clearKey.onclick = () => { enteredPin = []; updateDisplay(); message.textContent=''; };
+  clearKey.onclick = () => { enteredPin=[]; updateDisplay(); message.textContent=''; };
   keypad.appendChild(clearKey);
 }
 
-// Mostrar PIN ingresado (solo asteriscos)
 function updateDisplay() {
   pinDisplay.textContent = '*'.repeat(enteredPin.length);
 }
 
-// Función al presionar número
 function pressKey(num) {
+  if (!userSelect.value) { message.textContent='Seleccione un usuario'; return; }
   if (enteredPin.length < maxDigits) {
     enteredPin.push(num);
     updateDisplay();
@@ -79,29 +92,29 @@ function pressKey(num) {
   }
 }
 
-// Función de validación
 async function validatePin() {
+  const user = userSelect.value;
   const entered = enteredPin.join('');
   const encoder = new TextEncoder();
   const data = encoder.encode(entered);
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2,'0')).join('');
+  const hashHex = hashArray.map(b=>b.toString(16).padStart(2,'0')).join('');
 
-  if (hashHex === PIN_HASH) {
-    message.style.color = 'green';
-    message.textContent = 'Acceso permitido';
-    // Aquí rediriges según rol
+  if (hashHex === users[user].pinHash) {
+    message.style.color='green';
+    message.textContent=`Acceso permitido (${users[user].role})`;
+    // Aquí rediriges según role: vendedor/admin
   } else {
     attempts++;
-    message.style.color = 'red';
+    message.style.color='red';
     if (attempts >= maxAttempts) {
-      message.textContent = 'Máximo intentos alcanzado. Bloqueado 30s';
-      keypad.querySelectorAll('.key').forEach(k => k.onclick = null);
-      setTimeout(() => { attempts=0; enteredPin=[]; updateDisplay(); generateKeypad(); message.textContent=''; }, 30000);
+      message.textContent='Máximo intentos alcanzado. Bloqueado 30s';
+      keypad.querySelectorAll('.key').forEach(k => k.onclick=null);
+      setTimeout(()=>{ attempts=0; enteredPin=[]; updateDisplay(); generateKeypad(); message.textContent=''; },30000);
     } else {
-      message.textContent = `PIN incorrecto. Intentos restantes: ${maxAttempts - attempts}`;
-      enteredPin = [];
+      message.textContent=`PIN incorrecto. Intentos restantes: ${maxAttempts - attempts}`;
+      enteredPin=[];
       updateDisplay();
       generateKeypad();
     }

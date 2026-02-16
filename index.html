@@ -9,9 +9,64 @@
     video { width: 100%; max-width: 400px; border: 2px solid #333; }
     #result { font-size: 20px; margin-top: 20px; }
   </style>
+
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.scanner-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  border: 3px solid #00ff00;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.scanner-line {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: red;
+  animation: scan 2s linear infinite;
+  top: 20%;
+}
+
+@keyframes scan {
+  0% { top: 20%; }
+  50% { top: 75%; }
+  100% { top: 20%; }
+}
+</style>
+  
 </head>
 <body>
+  
+<div class="scanner-container">
+  <video id="video"></video>
+  <div class="scanner-overlay"></div>
+  <div class="scanner-line"></div>
+</div>
 
+<p id="result">Resultado: </p>
+  
 <h2>Escanear Código de Barras</h2>
 
 <video id="video"></video>

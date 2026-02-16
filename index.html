@@ -1,104 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Test Lector Código de Barras</title>
-  <script src="https://unpkg.com/@zxing/library@latest"></script>
-  <style>
-    body { font-family: Arial; text-align: center; }
-    video { width: 100%; max-width: 400px; border: 2px solid #333; }
-    #result { font-size: 20px; margin-top: 20px; }
-  </style>
+<script>
+const video = document.getElementById("video");
+const result = document.getElementById("result");
 
-<style>
-body {
-  font-family: Arial;
-  text-align: center;
-}
+async function iniciar() {
 
-.scanner-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-}
-
-video {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.scanner-overlay {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  width: 80%;
-  height: 60%;
-  border: 3px solid #00ff00;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.scanner-line {
-  position: absolute;
-  left: 10%;
-  width: 80%;
-  height: 3px;
-  background: red;
-  animation: scan 2s linear infinite;
-  top: 20%;
-}
-
-@keyframes scan {
-  0% { top: 20%; }
-  50% { top: 75%; }
-  100% { top: 20%; }
-}
-</style>
-  
-</head>
-<body>
-  
-<div class="scanner-container">
-  <video id="video"></video>
-  <div class="scanner-overlay"></div>
-  <div class="scanner-line"></div>
-</div>
-
-<p id="result">Resultado: </p>
-  
-<h2>Escanear Código de Barras</h2>
-
-<video id="video"></video>
-<p id="result">Resultado: </p>
-
-<script type="module">
-import { BrowserMultiFormatReader } from 
-'https://cdn.jsdelivr.net/npm/@zxing/browser@latest/+esm';
-
-const codeReader = new BrowserMultiFormatReader();
-const video = document.getElementById('video');
-const result = document.getElementById('result');
-
-async function iniciarScanner() {
-  try {
-    await codeReader.decodeFromVideoDevice(
-      null, // null = usa cámara disponible automáticamente
-      video,
-      (res, err) => {
-        if (res) {
-          result.textContent = "Resultado: " + res.getText();
-        }
-      }
-    );
-  } catch (error) {
-    console.error(error);
-    result.textContent = "Error al acceder a la cámara";
+  if (!("BarcodeDetector" in window)) {
+    result.textContent = "Tu navegador no soporta BarcodeDetector";
+    return;
   }
+
+  const stream = await navigator.mediaDevices.getUserMedia({
+    video: { facingMode: "environment" }
+  });
+
+  video.srcObject = stream;
+  await video.play();
+
+  const detector = new BarcodeDetector({
+    formats: ["ean_13", "ean_8", "code_128"]
+  });
+
+  async function detectar() {
+    try {
+      const barcodes = await detector.detect(video);
+
+      if (barcodes.length > 0) {
+        result.textContent = "Resultado: " + barcodes[0].rawValue;
+        navigator.vibrate(200);
+      }
+
+    } catch (err) {
+      console.error(err);
+    }
+
+    requestAnimationFrame(detectar);
+  }
+
+  detectar();
 }
 
-iniciarScanner();
+iniciar();
 </script>
-
-</body>
-</html>

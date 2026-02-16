@@ -58,4 +58,111 @@ video {
 
 <h2>📷 Scanner con Sonido</h2>
 
-<d
+<div id="container">
+  <video id="video" autoplay playsinline></video>
+  <div id="laser"></div>
+</div>
+
+<p id="result">Iniciando cámara...</p>
+
+<script>
+const video = document.getElementById("video");
+const result = document.getElementById("result");
+
+let lastCode = "";
+let detecting = false;
+
+// 🎵 Crear beep simple
+function beep() {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = ctx.createOscillator();
+  const gainNode = ctx.createGain();
+
+  oscillator.connect(gainNode);
+  gainNode.connect(ctx.destination);
+
+  oscillator.type = "sine";
+  oscillator.frequency.value = 1000;
+  gainNode.gain.value = 0.1;
+
+  oscillator.start();
+  setTimeout(() => {
+    oscillator.stop();
+    ctx.close();
+  }, 150);
+}
+
+async function iniciar() {
+
+  try {
+
+    if (!("BarcodeDetector" in window)) {
+      result.textContent = "❌ BarcodeDetector NO soportado en este navegador";
+      return;
+    }
+
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "environment" }
+    });
+
+    video.srcObject = stream;
+
+    const detector = new BarcodeDetector({
+      formats: ["ean_13", "ean_8", "code_128", "qr_code"]
+    });
+
+    result.textContent = "🔍 Escaneando...";
+
+    async function detectar() {
+
+      if (video.readyState === video.HAVE_ENOUGH_DATA) {
+
+        try {
+          const codes = await detector.detect(video);
+
+          if (codes.length > 0) {
+
+            const code = codes[0].rawValue;
+
+            if (code !== lastCode && !detecting) {
+
+              detecting = true;
+              lastCode = code;
+
+              result.textContent = "✅ Código: " + code;
+              result.classList.add("detected");
+
+              beep();
+
+              if (navigator.vibrate) {
+                navigator.vibrate(200);
+              }
+
+              setTimeout(() => {
+                detecting = false;
+                result.classList.remove("detected");
+              }, 1500);
+            }
+          }
+
+        } catch (err) {
+          console.log("Error detectando:", err);
+        }
+      }
+
+      requestAnimationFrame(detectar);
+    }
+
+    detectar();
+
+  } catch (error) {
+    result.textContent = "❌ Error accediendo a cámara";
+    console.error(error);
+  }
+}
+
+iniciar();
+</script>
+
+</body>
+</html>

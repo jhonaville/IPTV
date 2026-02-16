@@ -1,189 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scanner Android OK</title>
-
+<title>Login con PIN</title>
 <style>
-body {
-  text-align:center;
-  font-family: Arial;
-  background:#111;
-  color:white;
-}
-
-#container {
-  position:relative;
-  display:inline-block;
-  width:90%;
-  max-width:400px;
-  margin-top:20px;
-}
-
-video {
-  width:100%;
-  border-radius:10px;
-}
-
-#laser {
-  position:absolute;
-  left:0;
-  width:100%;
-  height:3px;
-  background:red;
-  box-shadow:0 0 10px red;
-  animation: scan 2s linear infinite;
-}
-
-@keyframes scan {
-  0% { top:0; }
-  50% { top:95%; }
-  100% { top:0; }
-}
-
-#result {
-  font-size:20px;
-  margin-top:20px;
-  min-height:30px;
-}
-
-button {
-  padding:10px 20px;
-  font-size:16px;
-  border:none;
-  border-radius:8px;
-  background:#00c853;
-  color:white;
-}
-
-.detected {
-  color:#00ff88;
-  font-weight:bold;
-}
+  body { font-family: Arial, sans-serif; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; margin:0; background:#f2f2f2;}
+  .login-box { background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); text-align:center; }
+  h2 { margin-bottom:10px; }
+  .pin-display { font-size:24px; letter-spacing:10px; margin:10px 0; min-height:30px; }
+  .keypad { display:grid; grid-template-columns:repeat(3,60px); gap:10px; justify-content:center; margin-top:10px; }
+  .key { background:#007bff; color:#fff; font-size:20px; padding:15px; border-radius:5px; cursor:pointer; user-select:none; }
+  .key:active { background:#0056b3; }
+  .action { background:#28a745; grid-column:span 3; margin-top:10px; }
+  .message { margin-top:10px; color:red; min-height:20px; }
 </style>
 </head>
-
 <body>
 
-<h2>📷 Scanner con Sonido (Android Fix)</h2>
-
-<button onclick="iniciar()">Iniciar cámara</button>
-
-<div id="container">
-  <video id="video" autoplay playsinline></video>
-  <div id="laser"></div>
+<div class="login-box">
+  <h2>Ingrese su PIN</h2>
+  <div class="pin-display" id="pinDisplay"></div>
+  <div class="keypad" id="keypad"></div>
+  <div class="message" id="message"></div>
 </div>
 
-<p id="result">Presiona iniciar</p>
-
 <script>
-const video = document.getElementById("video");
-const result = document.getElementById("result");
+const PIN_HASH = "ef92b778ba5c53fa2b3f96b2f3edaf0b2f06cbbff8ff33e8fa64e49e11c2f5c4"; // Hash simulado de '1234' con SHA-256
+let enteredPin = [];
+const maxDigits = 4;
+let attempts = 0;
+const maxAttempts = 3;
 
-let lastCode = "";
-let detecting = false;
-let audioCtx;
+const pinDisplay = document.getElementById('pinDisplay');
+const keypad = document.getElementById('keypad');
+const message = document.getElementById('message');
 
-// 🔊 Inicializar audio SOLO después de interacción
-function initAudio() {
-  if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// Función para mezclar números aleatoriamente
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Generar teclado
+function generateKeypad() {
+  keypad.innerHTML = '';
+  let numbers = shuffleArray([0,1,2,3,4,5,6,7,8,9]);
+  numbers.forEach(num => {
+    const key = document.createElement('div');
+    key.className = 'key';
+    key.textContent = num;
+    key.onclick = () => pressKey(num);
+    keypad.appendChild(key);
+  });
+
+  // Botón de borrar
+  const clearKey = document.createElement('div');
+  clearKey.className = 'key action';
+  clearKey.textContent = 'BORRAR';
+  clearKey.onclick = () => { enteredPin = []; updateDisplay(); message.textContent=''; };
+  keypad.appendChild(clearKey);
+}
+
+// Mostrar PIN ingresado (solo asteriscos)
+function updateDisplay() {
+  pinDisplay.textContent = '*'.repeat(enteredPin.length);
+}
+
+// Función al presionar número
+function pressKey(num) {
+  if (enteredPin.length < maxDigits) {
+    enteredPin.push(num);
+    updateDisplay();
+    if (enteredPin.length === maxDigits) validatePin();
   }
 }
 
-// 🎵 Beep compatible Android
-function beep() {
-  if (!audioCtx) return;
+// Función de validación
+async function validatePin() {
+  const entered = enteredPin.join('');
+  const encoder = new TextEncoder();
+  const data = encoder.encode(entered);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2,'0')).join('');
 
-  const oscillator = audioCtx.createOscillator();
-  const gainNode = audioCtx.createGain();
-
-  oscillator.connect(gainNode);
-  gainNode.connect(audioCtx.destination);
-
-  oscillator.type = "sine";
-  oscillator.frequency.value = 1200;
-  gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
-
-  oscillator.start();
-  oscillator.stop(audioCtx.currentTime + 0.15);
-}
-
-async function iniciar() {
-
-  try {
-
-    initAudio(); // 🔥 ACTIVAR AUDIO
-
-    if (!("BarcodeDetector" in window)) {
-      result.textContent = "❌ BarcodeDetector NO soportado";
-      return;
+  if (hashHex === PIN_HASH) {
+    message.style.color = 'green';
+    message.textContent = 'Acceso permitido';
+    // Aquí rediriges según rol
+  } else {
+    attempts++;
+    message.style.color = 'red';
+    if (attempts >= maxAttempts) {
+      message.textContent = 'Máximo intentos alcanzado. Bloqueado 30s';
+      keypad.querySelectorAll('.key').forEach(k => k.onclick = null);
+      setTimeout(() => { attempts=0; enteredPin=[]; updateDisplay(); generateKeypad(); message.textContent=''; }, 30000);
+    } else {
+      message.textContent = `PIN incorrecto. Intentos restantes: ${maxAttempts - attempts}`;
+      enteredPin = [];
+      updateDisplay();
+      generateKeypad();
     }
-
-    const stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: "environment" }
-    });
-
-    video.srcObject = stream;
-
-    const detector = new BarcodeDetector({
-      formats: ["ean_13", "ean_8", "code_128", "qr_code"]
-    });
-
-    result.textContent = "🔍 Escaneando...";
-
-    async function detectar() {
-
-      if (video.readyState === video.HAVE_ENOUGH_DATA) {
-
-        try {
-          const codes = await detector.detect(video);
-
-          if (codes.length > 0) {
-
-            const code = codes[0].rawValue;
-
-            if (code !== lastCode && !detecting) {
-
-              detecting = true;
-              lastCode = code;
-
-              result.textContent = "✅ Código: " + code;
-              result.classList.add("detected");
-
-              beep();
-
-              if (navigator.vibrate) {
-                navigator.vibrate(200);
-              }
-
-              setTimeout(() => {
-                detecting = false;
-                result.classList.remove("detected");
-              }, 1500);
-            }
-          }
-
-        } catch (err) {
-          console.log(err);
-        }
-      }
-
-      requestAnimationFrame(detectar);
-    }
-
-    detectar();
-
-  } catch (error) {
-    result.textContent = "❌ Error accediendo a cámara";
-    console.error(error);
   }
 }
+
+generateKeypad();
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
